@@ -1,0 +1,39 @@
+{% extends 'query_base.html' %}
+{% block content %}
+    <table align="center" border="1px" class="table table-hover" >
+        <tr>
+            <th>航点编号</th>
+            <th>所属架次</th>
+            <th>所用飞机</th>
+            <th>实时经度</th>
+            <th>实时纬度</th>
+            <th>实时高度</th>
+            <th>水平速度</th>
+            <th>竖直速度</th>
+            <th>gps数量</th>
+            <th>剩余电量</th>
+            <th>横滚角度</th>
+            <th>俯仰角度</th>
+            <th>实时时间</th>
+        </tr>
+
+        {% for point in points %}
+            <tr>
+                <td>{{ point.real_id }}</td>
+                <td>{{ point.sortie.sortie_py }}</td>
+                <td>{{ point.uav.uav_id }}</td>
+                <td>{{ point.real_longitude }}</td>
+                <td>{{ point.real_latitude }}</td>
+                <td>{{ point.real_altitude }}</td>
+                <td>{{ point.real_hs }}</td>
+                <td>{{ point.real_vs }}</td>
+                <td>{{ point.real_count }}</td>
+                <td>{{ point.real_battery }}</td>
+                <td>{{ point.real_roll }}</td>
+                <td>{{ point.real_pitch }}</td>
+                <td>{{ point.data_time }}</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+{% endblock %}

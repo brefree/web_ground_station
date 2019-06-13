@@ -1,0 +1,29 @@
+{% extends 'query_base.html' %}
+{% block content %}
+    <table border="1px" class="table table-bordered">
+        <tr>
+            <th>架次编号</th>
+            <th>飞机编号</th>
+            <th>飞机起点</th>
+            <th>飞机终点</th>
+            <th>起飞时间</th>
+            <th>降落时间</th>
+            <th>起飞电量</th>
+            <th>降落电量</th>
+        </tr>
+
+        {% for foo in sortie %}
+            <tr>
+                <td><a href="{% url 'query_point' foo.id %}">{{ foo.sortie_py }}</a></td>
+                <td><a href="{% url 'query_uav' foo.uav.id %}">{{ foo.uav.uav_id }}</a></td>
+                <td>{{ foo.line.start_point }}</td>
+                <td>{{ foo.line.end_point }}</td>
+                <td>{{ foo.real_point.first.data_time }}</td>
+                <td>{{ foo.real_point.last.data_time }}</td>
+                <td>{{ foo.real_point.first.real_battery }}</td>
+                <td>{{ foo.real_point.last.real_battery }}</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+{% endblock %}

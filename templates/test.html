@@ -1,0 +1,97 @@
+
+        $(function () {
+            var uav_id = ['2', '1'];
+            var uav_longitude = ['113.126132', '113.166132'];
+            var uav_latitude = ['23.233011', '23.213011'];
+            var map = new AMap.Map("container", {
+                resizeEnable: true,
+                zoom: 10,
+                center: [113.2759952545166, 23.117055306224895]
+            });
+            AMapUI.loadUI(['overlay/SimpleMarker'], function (SimpleMarker) {
+                //启动页面
+                initPage(SimpleMarker);
+            });
+            $('#btn').attr({value: 2});
+            
+            $pointMsg = $("<tr>" +
+            "<td>" + uav_id[i] + "</td>" +
+            "<td>" + '上线'+ "</td>" +
+            "<td>" + "<button value="+ 0 +">定位</button>" + "</td>" +
+            "<td>" + "<a href='" + "/myapp/load_line/0/"+"'>监控</a>" + "</td>" +
+            "<td>" + "<a href=''>操作</a>" + "</td>" +
+            "</tr>");
+            $('#point').append($pointMsg);
+            
+            $pointMsg = $("<tr>" +
+            "<td>" + uav_id[i] + "</td>" +
+            "<td>" + '上线'+ "</td>" +
+            "<td>" + "<button value="+ 1 +">定位</button>" + "</td>" +
+            "<td>" + "<a href='" + "/myapp/load_line/1/"+"'>监控</a>" + "</td>" +
+            "<td>" + "<a href=''>操作</a>" + "</td>" +
+            "</tr>");
+            $('#point').append($pointMsg);
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+            $('#btn').click(function () {
+                // $('#point').attr({class:"hidden"});
+                $('#point').toggle();
+
+            });
+            $('button').click(function () {
+                // $('#point').attr({class:"hidden"});
+                // $('#point').toggle();
+                console.log($(this).attr('value'));
+                map.setCenter([uav_longitude[$(this).attr('value')],uav_latitude[$(this).attr('value')]]);
+                console.log(map.getCenter);
+
+            });
+            // 删除当前航点和航线
+
+
+            // 左键生成航点与航线,并将航点信息添加到航点栏中
+            function initPage(SimpleMarker) {
+
+                function load() {
+                    for (var i=0; i<uav_id.length; i++) {
+                        // 创建航点
+                        var aaa = new SimpleMarker({
+                            // 设置标记可以移动
+                            draggable: true,
+
+                            //前景文字
+                            iconLabel: "" + uav_id[i],
+
+                            //图标主题
+                            iconTheme: 'default',
+
+                            //背景图标样式
+                            iconStyle: 'red',
+
+                            //...其他Marker选项...，不包括content
+                            map: map,
+                            position: [uav_longitude[i],uav_latitude[i]]
+                        });
+                    }
+                }
+                load();
+
+
+            }
+
+
+        });
+    
