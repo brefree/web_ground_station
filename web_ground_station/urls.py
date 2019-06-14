@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from myapp.views import uav_index
+from map.views import uav_index
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^myapp/', include('myapp.urls')),
+    url(r'^map/', include('map.urls')),
     url(r'^$', uav_index),
 ]

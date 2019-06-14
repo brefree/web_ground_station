@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class MapConfig(AppConfig):
+class MyappConfig(AppConfig):
     name = 'map'
