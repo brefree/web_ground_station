@@ -29,15 +29,8 @@ def send_data(request, pk):
         # 如果是普通的http方法
         return render(request, 'map_move.html')
     else:
-        # while my_message:
-        # request.websocket.send(my_message)
-        #   time.sleep(1)
-        # for i in range(10):
-        #     request.websocket.send(my_message)
-        #     time.sleep(0.5)
         while True:
             data = RealPoint.objects.filter(uav_id=pk).last()
-            # ret = serializers.serialize("json", data)
             ret = model_to_dict(data)
             request.websocket.send(json.dumps(ret).encode())
             time.sleep(1)
@@ -71,10 +64,7 @@ def echo_once(request):
             real_point.real_battery = my_list[15]
             real_point.real_roll = my_list[17]
             real_point.real_pitch = my_list[19]
-            print(my_list)
-            # print(my_list[21])
             sortie = UavData.objects.get(pk=my_list[21])
-
             real_point.sortie = sortie
             uav = Uav.objects.get(pk=my_list[23])
             real_point.uav = uav
@@ -85,12 +75,6 @@ def echo_once(request):
                 uav_id.append(my_list[-1])
                 uav_longitude.append(my_list[3])
                 uav_latitude.append(my_list[5])
-                # print(type(message))
-                # my_dict = eval(message.decode('utf-8'))
-                # my_dict = json.load(message.decode('utf-8'))
-                # print(my_dict,type(my_dict))
-                # uav_id.append(my_dict['pk'])
-                # print(my_dict,type(my_dict))
         my_message = None
 
 
@@ -108,21 +92,6 @@ def uav_move(request, pk):
     real_point = RealPoint.objects.filter(uav_id=pk).last()
     return render(request, 'myapp/map_move.html',
                   {'real_point': real_point, 'point_list': point_list, 'pk': pk})
-
-
-# 飞机首页
-# def uav_index(request):
-#     uavs = Uav.objects.filter(status=1)
-#     uav_id = []
-#     uav_longitude = []
-#     uav_latitude = []
-#     for uav in uavs:
-#         uav_id.append(uav.id)
-#         real_point = RealPoint.objects.filter(uav_id=uav.id).last()
-#         uav_latitude.append(real_point.real_latitude)
-#         uav_longitude.append(real_point.real_longitude)
-#     return render(request, 'map_bg.html',
-#                   {'uav_id': uav_id, 'uav_longitude': uav_longitude, 'uav_latitude': uav_latitude})
 
 
 # 飞机首页

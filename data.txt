@@ -11,7 +11,17 @@ real_pitch,8,
 sortie,1,
 uav,1,
 
-
-real_id,1,real_longitude,113.166132,real_latitude,23.213011,real_altitude,400,real_hs,20,real_vs,0,real_count,15,real_battery,80,real_roll,5,real_pitch,8,sortie,1,uav,1
-
-real_id,1,real_longitude,113.166132,real_latitude,23.213011,real_altitude,400,real_hs,20,real_vs,0,real_count,15,real_battery,80,real_roll,5,real_pitch,8,sortie,1,uav,1
+{
+"real_id",1,
+"real_longitude","113.166132",
+"real_latitude","23.213011",
+"real_altitude",400,
+"real_hs",20,
+"real_vs",0,
+"real_count",15,
+"real_battery",80,
+"real_roll",5,
+"real_pitch",8,
+"sortie",1,
+"uav",1
+}

@@ -144,15 +144,11 @@ class Uav(models.Model):
 
 # 飞机类型表
 class UavType(models.Model):
-    # 飞机型号
-    uav_model = models.CharField(max_length=256, blank=True, null=True)
-    # 飞机类型
-    uav_type = models.CharField(max_length=256, blank=True, null=True)
-    # 飞机自重
-    uav_weight = models.CharField(max_length=256, blank=True, null=True)
-    # 标准起飞重量
-    uav_norm_weight = models.CharField(max_length=256, blank=True, null=True)
-    # 最大起飞重量
-    uav_max_weight = models.CharField(max_length=256, blank=True, null=True)
-    # 创建时间
-    data_time = models.DateTimeField(auto_now_add=True)
+    name = models.CharField('型号名称', max_length=256, blank=True, null=True)
+    type = models.CharField('飞机类型', max_length=256, blank=True, null=True)
+    weight = models.CharField('飞机自重', max_length=256, blank=True, null=True)
+    normal_fly_weight = models.CharField('标准起飞重量', max_length=256, blank=True, null=True)
+    max_fly_weight = models.CharField('最大起飞重量', max_length=256, blank=True, null=True)
+    create_time = models.DateTimeField('创建时间', auto_now_add=True)
+    update_time = models.DateTimeField('创建时间', auto_now=True)
+    status = models.PositiveSmallIntegerField('状态',)
