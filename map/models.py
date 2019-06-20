@@ -137,7 +137,7 @@ class Uav(models.Model):
     # 飞机管理员
     uav_admin = models.ForeignKey('UavUser')
     # 创建时间
-    data_time = models.DateTimeField(auto_now_add=True)
+    data_time = models.DateTimeField('创建时间', auto_now_add=True)
     ip = models.CharField('地址', max_length=16, default='0.0.0.0')
     status = models.PositiveSmallIntegerField('状态', choices=uav_status, default=2)
 
@@ -150,5 +150,5 @@ class UavType(models.Model):
     normal_fly_weight = models.CharField('标准起飞重量', max_length=256, blank=True, null=True)
     max_fly_weight = models.CharField('最大起飞重量', max_length=256, blank=True, null=True)
     create_time = models.DateTimeField('创建时间', auto_now_add=True)
-    update_time = models.DateTimeField('创建时间', auto_now=True)
-    status = models.PositiveSmallIntegerField('状态',)
+    update_time = models.DateTimeField('更新时间', auto_now=True)
+    status = models.PositiveSmallIntegerField('状态', default=1)
