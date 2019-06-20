@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9407ffef-2f5b-424c-aad5-a84ec679fc12" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/map/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_ground_station/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_ground_station/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,11 +48,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/map/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
+            <state relative-caret-position="2907">
               <caret line="153" column="61" selection-start-line="153" selection-start-column="61" selection-end-line="153" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web_ground_station/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -119,7 +127,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/web_ground_station/settings.py" />
         <option value="$PROJECT_DIR$/map/cv_demo.py" />
         <option value="$PROJECT_DIR$/map/tests.py" />
         <option value="$PROJECT_DIR$/data.txt" />
@@ -127,6 +134,7 @@
         <option value="$PROJECT_DIR$/constant" />
         <option value="$PROJECT_DIR$/constant.py" />
         <option value="$PROJECT_DIR$/map/models.py" />
+        <option value="$PROJECT_DIR$/web_ground_station/settings.py" />
       </list>
     </option>
   </component>
@@ -159,6 +167,11 @@
               <item name="web_ground_station" type="b2602c69:ProjectViewProjectNode" />
               <item name="web_ground_station" type="462c0819:PsiDirectoryNode" />
               <item name="map" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web_ground_station" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web_ground_station" type="462c0819:PsiDirectoryNode" />
+              <item name="web_ground_station" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -343,13 +356,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web_ground_station/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="52" lean-forward="true" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/map/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -413,8 +419,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/map/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
+        <state relative-caret-position="2907">
           <caret line="153" column="61" selection-start-line="153" selection-start-column="61" selection-end-line="153" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_ground_station/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
