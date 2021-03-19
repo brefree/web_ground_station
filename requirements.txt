@@ -8,7 +8,7 @@ Django==1.11.7
 django-celery==3.2.1
 django-debugtools==1.7.3
 django-haystack==2.8.1
-djangorestframework==3.8.2
+djangorestframework==3.11.2
 dwebsocket==0.4.2
 jieba==0.39
 kiwisolver==1.0.1
